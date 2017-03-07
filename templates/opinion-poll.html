@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assembly Election 2017</title>
+  <link rel="stylesheet" type="text/css" href="{{ static_url('dist/css/opinion-poll-style.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class='selection'>
+        <select id="state">
+          <option value="goa">Goa</option>
+          <option value="up">Uttar Pradesh</option>
+        </select>
+      </div>
+      <h1><span id="state-name"></span> Assembly Election</h1>
+    </div>
+    <div class="opinion-header">
+      <h1>Opinion Poll - 2017</h1>
+    </div>
+    <div id="agency-list"></div>
+    <div id="opinion-polls"></div>
+    <div class="previous-header">
+      <h1>Previous Years Results</h1>
+    </div>
+    <div id="previous-results"></div>
+  </div>
+  <script src="{{ static_url('vendor/d3/d3.min.js') }}"></script>
+  <script src="{{ static_url('vendor/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ static_url('dist/js/d3-force-cluster.min.js') }}"></script>
+  <script src="{{ static_url('dist/js/render.js') }}"></script>
+  <script src="{{ static_url('dist/js/previous_results.js') }}"></script>
+  <script src="{{ static_url('dist/js/opinion_polls.js') }}"></script>
+  <script>
+    $('select#state').on('change', function() {
+      var option = $(this).val()
+      var name = $("#state option:selected").html()
+      update(option, name)
+    })
+
+    function update(option, name) {
+      $('#state-name').html(name)
+      $.ajax({
+        type: 'GET',
+        url: `/opinion-poll/data/?state=${option}`,
+        dataType: 'JSON'
+      })
+      .done((response) => {
+        console.log('done')
+        console.log(response)
+        render(response)
+      })
+      .fail((xhr, status, error) => {
+        console.log('fail')
+        console.log('error: ', status)
+      })
+      .always(() => {})
+    }
+
+    update('goa', 'Goa')
+  </script>
+</body>
+</html>
