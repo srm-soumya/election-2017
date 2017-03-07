@@ -1,0 +1,49 @@
+body {
+  font-family: 'Roboto Mono', monospace;;
+}
+.header, .opinion-header, .previous-header, #previous-results, #opinion-polls, #agency-list {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.7);
+  justify-content: center;
+}
+.header h1, .opinion-header h1, .previous-header h1{
+  margin: 0.75rem 0;
+}
+.opinion-header h1, .previous-header h1 {
+  font-size: 1.15rem;
+}
+#previous-results .chart {
+  padding: 0 2rem;
+}
+#agency-list button {
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #777;
+  cursor: pointer;
+}
+#agency-list button.active {
+  background: #333;
+  color: #eee;
+}
+button:focus {outline:0;}
+text.party-label {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+text.party-label.winner {
+  font-size: 1.3rem;
+  fill: tomato;
+}
+text.year-label {
+  font-size: 0.92rem;
+  font-weight: bold;
+}
+.x-axis line, .x-axis path {
+  stroke: #fff;
+}
+.y-axis line, .y-axis path {
+  shape-rendering: crispEdges;
+  stroke: #eee;
+}
