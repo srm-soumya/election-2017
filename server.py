@@ -24,7 +24,7 @@ class Application(tornado.web.Application):
 
 def main():
     app = Application()
-    app.listen(6565)
+    app.listen(80)
     IOLoop.instance().start()
 
 
