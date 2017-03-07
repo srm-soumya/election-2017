@@ -1,0 +1,22 @@
+{
+  "name": "election-2017",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Soumya Ranjan <soumya.ranjan@gramener.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/srm-soumya/election-2017",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^4.7.1",
+    "d3-force-cluster": "https://github.com/ericsoco/d3-force-cluster.git",
+    "jquery": "^3.1.1"
+  }
+}

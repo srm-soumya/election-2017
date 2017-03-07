@@ -55,6 +55,7 @@ data/
 # Ignore bower components and npm modules
 node_modules/
 bower_components/
+static/vendor
 
 # Windows shortcut files
 *.lnk
