@@ -54,16 +54,6 @@ function drawbars() {
       .ticks(4)
       .tickSize(-box_width)
 
-  // Create Bar Chart
-  var bars = box_svg
-      .selectAll('rect.bar').data(c => c.values)
-    .enter().append('rect')
-      .attr('x', d => box_xscale(d.party))
-      .attr('width', box_xscale.bandwidth())
-      .attr('y', d => box_yscale(d.wins))
-      .attr('height', d => (box_height - box_yscale(d.wins)))
-      .attr('fill', d => color(d.party))
-
   box_svg.append('g')
     .classed('axis', true)
     .classed('x-axis', true)
@@ -74,6 +64,16 @@ function drawbars() {
     .classed('axis', true)
     .classed('y-axis', true)
     .call(box_yaxis)
+
+  // Create Bar Chart
+  var bars = box_svg
+      .selectAll('rect.bar').data(c => c.values)
+    .enter().append('rect')
+      .attr('x', d => box_xscale(d.party))
+      .attr('width', box_xscale.bandwidth())
+      .attr('y', d => box_yscale(d.wins))
+      .attr('height', d => (box_height - box_yscale(d.wins)))
+      .attr('fill', d => color(d.party))
 
   // Bar Labels
   var bars_label = box_svg

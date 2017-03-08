@@ -69,16 +69,6 @@ var color = d3.scaleOrdinal()
     .domain(['BJP', 'CONG', 'AAP', 'OTH', 'SP-CONG', 'BSP', 'SP'])
     .range(['#F97D09', '#23cdc7', '#29bf10', '#999', '#FE0000', '#22409A', '#FE0000'])
 
-// Create Bar Chart
-var bars = box_svg
-    .selectAll('rect.bar').data(c => c.values)
-  .enter().append('rect')
-    .attr('x', d => box_xscale(d.party))
-    .attr('width', box_xscale.bandwidth())
-    .attr('y', d => box_yscale(d.wins))
-    .attr('height', d => (box_height - box_yscale(d.wins)))
-    .attr('fill', d => color(d.party))
-
 box_svg.append('g')
   .classed('axis', true)
   .classed('x-axis', true)
@@ -89,6 +79,16 @@ box_svg.append('g')
   .classed('axis', true)
   .classed('y-axis', true)
   .call(box_yaxis)
+
+// Create Bar Chart
+var bars = box_svg
+    .selectAll('rect.bar').data(c => c.values)
+  .enter().append('rect')
+    .attr('x', d => box_xscale(d.party))
+    .attr('width', box_xscale.bandwidth())
+    .attr('y', d => box_yscale(d.wins))
+    .attr('height', d => (box_height - box_yscale(d.wins)))
+    .attr('fill', d => color(d.party))
 
 // Bar Labels
 var bars_label = box_svg
