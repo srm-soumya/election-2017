@@ -58,3 +58,31 @@ select#state:focus { outline: 0 }
 .header h1 {
   margin: 0 10rem;
 }
+
+@media (max-width: 500px) {
+  .header h1, .opinion-header h1, .previous-header h1 {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+  }
+
+  #agency-list button {
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.8rem;
+  }
+  select#state {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  text.party-label {
+    font-size: 2.2rem;
+  }
+  text.party-label.winner {
+    font-size: 3rem;
+  }
+  text.seat-label {
+    font-size: 2.2rem;
+  }
+}

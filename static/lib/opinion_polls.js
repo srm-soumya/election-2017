@@ -100,7 +100,8 @@ function drawforce() {
     .enter().append('text')
       .classed('seat-label', true)
       .attr('x', d => xscale(d))
-      .attr('y', 40)
+      .attr('y', 20)
+      .attr('dy', '1.1em')
       .attr('text-anchor', 'middle')
       .attr('fill', '#fff')
 
