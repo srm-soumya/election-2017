@@ -11,14 +11,14 @@
     <div class="header">
       <div class='selection'>
         <select id="state">
-          <option value="goa">Goa</option>
-          <option value="manipur">Manipur</option>
-          <option value="punjab">Punjab</option>
-          <option value="uttarakhand">Uttarakhand</option>
-          <option value="up">Uttar Pradesh</option>
+          <option value="goa" data-seats="40">Goa</option>
+          <option value="manipur" data-seats="60">Manipur</option>
+          <option value="punjab" data-seats="117">Punjab</option>
+          <option value="uttarakhand" data-seats="70">Uttarakhand</option>
+          <option value="up" data-seats="403">Uttar Pradesh</option>
         </select>
       </div>
-      <h1><span id="state-name"></span> Assembly Election</h1>
+      <h1><span id="state-name"></span> Assembly Election - <span id="num-seats"></span> seats</h1>
     </div>
     <div class="opinion-header">
       <h1>Opinion Poll - 2017</h1>
@@ -38,21 +38,24 @@
   <script src="{{ static_url('dist/js/opinion_polls.js') }}"></script>
   <script>
     $('select#state').on('change', function() {
-      var option = $(this).val()
-      var name = $("#state option:selected").html()
-      update(option, name)
+      var $this = $(this)
+
+      var option = $this.val(),
+          name = $this.find(':selected').html(),
+          seats = $this.find(':selected').data('seats')
+
+      update(option, name, seats)
     })
 
-    function update(option, name) {
+    function update(option, name, seats) {
       $('#state-name').html(name)
+      $('#num-seats').html(seats)
       $.ajax({
         type: 'GET',
         url: `/opinion-poll/data/?state=${option}`,
         dataType: 'JSON'
       })
       .done((response) => {
-        console.log('done')
-        console.log(response)
         render(response)
       })
       .fail((xhr, status, error) => {
@@ -62,7 +65,7 @@
       .always(() => {})
     }
 
-    update('goa', 'Goa')
+    update('goa', 'Goa', '40')
   </script>
 </body>
 </html>
