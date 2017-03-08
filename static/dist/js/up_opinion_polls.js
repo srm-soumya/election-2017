@@ -13,35 +13,35 @@ var svg = d3.select('#opinion-polls').append('svg')
 
 // Structure of Data
 var opinion_data = {
-  'India Today-Axis': {
-    'BJP': { 'seats': 186, 'range': '180-191', 'percentage': 34.8},
-    'SP-CONG': { 'seats': 173, 'range': '168-178', 'percentage': 33.2},
-    'BSP': { 'seats': 41,  'range': '39-42',  'percentage': 20.1},
-    'OTH': { 'seats': 3,  'range': '1-4',  'percentage': 11.9}
+  "India Today-Axis": {
+    "BJP": { "seats": 186, "range": "180-191", "percentage": 34.8},
+    "SP-CONG": { "seats": 173, "range": "168-178", "percentage": 33.2},
+    "BSP": { "seats": 41,  "range": "39-42",  "percentage": 20.1},
+    "OTH": { "seats": 3,  "range": "1-4",  "percentage": 11.9}
   },
-  'Times Now-VMR': {
-    'BJP': { 'seats': 202, 'range': '202', 'percentage': 34},
-    'SP-CONG': { 'seats': 147, 'range': '147', 'percentage': 31},
-    'BSP': { 'seats': 47,  'range': '47',  'percentage': 24},
-    'OTH': { 'seats': 7,  'range': '7',  'percentage': 11}
+  "Times Now-VMR": {
+    "BJP": { "seats": 202, "range": "202", "percentage": 34},
+    "SP-CONG": { "seats": 147, "range": "147", "percentage": 31},
+    "BSP": { "seats": 47,  "range": "47",  "percentage": 24},
+    "OTH": { "seats": 7,  "range": "7",  "percentage": 11}
   },
-  'ABP News-Lokniti': {
-    'BJP': { 'seats': 126, 'range': '118-128', 'percentage': 35},
-    'SP-CONG': { 'seats': 194, 'range': '187-197', 'percentage': 29},
-    'BSP': { 'seats': 83,  'range': '76-86',  'percentage': 23},
-    'OTH': { 'seats': 0,  'range': '-',  'percentage': 0}
+  "ABP News-Lokniti": {
+    "BJP": { "seats": 126, "range": "118-128", "percentage": 35},
+    "SP-CONG": { "seats": 194, "range": "187-197", "percentage": 29},
+    "BSP": { "seats": 83,  "range": "76-86",  "percentage": 23},
+    "OTH": { "seats": 0,  "range": "-",  "percentage": 0}
   },
-  'VDPAssociates': {
-    'BJP': { 'seats': 207, 'range': '207', 'percentage': 35},
-    'SP-CONG': { 'seats': 128, 'range': '128', 'percentage': 32},
-    'BSP': { 'seats': 58,  'range': '58',  'percentage': 22},
-    'OTH': { 'seats': 0,  'range': '-',  'percentage': 0}
+  "VDPAssociates": {
+    "BJP": { "seats": 207, "range": "207", "percentage": 35},
+    "SP-CONG": { "seats": 128, "range": "128", "percentage": 32},
+    "BSP": { "seats": 58,  "range": "58",  "percentage": 22},
+    "OTH": { "seats": 0,  "range": "-",  "percentage": 0}
   },
-  'THE WEEK-Hansa Research': {
-    'BJP': { 'seats': 194, 'range': '192-196', 'percentage': 41.4},
-    'SP-CONG': { 'seats': 180, 'range': '178-182', 'percentage': 23.5},
-    'BSP': { 'seats': 22,  'range': '20-24',  'percentage': 24},
-    'OTH': { 'seats': 7,  'range': '5-9',  'percentage': 5}
+  "THE WEEK-Hansa Research": {
+    "BJP": { "seats": 194, "range": "192-196", "percentage": 41.4},
+    "SP-CONG": { "seats": 180, "range": "178-182", "percentage": 23.5},
+    "BSP": { "seats": 22,  "range": "20-24",  "percentage": 24},
+    "OTH": { "seats": 7,  "range": "5-9",  "percentage": 5}
   }
 }
 
