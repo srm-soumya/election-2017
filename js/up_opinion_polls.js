@@ -14,19 +14,9 @@ var svg = d3.select('#opinion-polls').append('svg')
 // Structure of Data
 var opinion_data = {
   'India Today-Axis': {
-    'BJP': { 'seats': 42, 'range': '40-44', 'percentage': 34},
-    'CONG': { 'seats': 25, 'range': '23-27', 'percentage': 31},
-    'OTH': { 'seats': 3,  'range': '1-4',  'percentage': 11}
-  },
-  'Uttarakhand Post': {
-    'BJP': { 'seats': 29, 'range': '29', 'percentage': 35},
-    'CONG': { 'seats': 36, 'range': '36', 'percentage': 29},
-    'OTH': { 'seats': 5,  'range': '5',  'percentage': 0}
-  },
-  'ABP News-Lokniti': {
-    'BJP': { 'seats': 42, 'range': '35-43', 'percentage': 35},
-    'CONG': { 'seats': 28, 'range': '22-30', 'percentage': 32},
-    'OTH': { 'seats': 0,  'range': '-',  'percentage': 0}
+    'BJP': { 'seats': 33, 'range': '31-35', 'percentage': 34},
+    'CONG': { 'seats': 22, 'range': '19-24', 'percentage': 31},
+    'OTH': { 'seats': 5,  'range': '3-8',  'percentage': 11}
   }
 }
 
@@ -51,10 +41,10 @@ var xscale = d3.scalePoint()
     .padding(0.5)
 
 // Set Radius, spacing between clusters and nodes
-var node_radius = 6,
+var node_radius = 7,
     padding = 0.8,
     cluster_padding = 10,
-    num_nodes = 70
+    num_nodes = 60
 
 var foci = {
   'center': { x: width / 2, y: height/2, color: '#555'}

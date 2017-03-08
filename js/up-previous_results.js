@@ -1,14 +1,14 @@
 // Previous Year Results data
 var previous_data = [
-  {'year': 2002, 'party': 'BJP', 'wins': 19},
-  {'year': 2002, 'party': 'CONG', 'wins': 36},
-  {'year': 2002, 'party': 'OTH', 'wins': 15},
-  {'year': 2007, 'party': 'BJP', 'wins': 34},
-  {'year': 2007, 'party': 'CONG', 'wins': 21},
-  {'year': 2007, 'party': 'OTH', 'wins': 14},
-  {'year': 2012, 'party': 'BJP', 'wins': 31},
-  {'year': 2012, 'party': 'CONG', 'wins': 32},
-  {'year': 2012, 'party': 'OTH', 'wins': 7},
+  {'year': 2002, 'party': 'BJP', 'wins': 4},
+  {'year': 2002, 'party': 'CONG', 'wins': 20},
+  {'year': 2002, 'party': 'OTH', 'wins': 36},
+  {'year': 2007, 'party': 'BJP', 'wins': 0},
+  {'year': 2007, 'party': 'CONG', 'wins': 30},
+  {'year': 2007, 'party': 'OTH', 'wins': 30},
+  {'year': 2012, 'party': 'BJP', 'wins': 0},
+  {'year': 2012, 'party': 'CONG', 'wins': 42},
+  {'year': 2012, 'party': 'OTH', 'wins': 18},
 ]
 
 var number_seats = (previous_data
