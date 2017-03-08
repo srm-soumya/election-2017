@@ -13,35 +13,20 @@ var svg = d3.select('#opinion-polls').append('svg')
 
 // Structure of Data
 var opinion_data = {
-  'HuffPost-CVoter': {
-    'SAD-BJP': { 'seats': 11, 'range': '11', 'percentage': 34.8},
-    'CONG': { 'seats': 43, 'range': '43', 'percentage': 33.2},
-    'AAP': { 'seats': 63,  'range': '63',  'percentage': 20.1},
-    'OTH': { 'seats': 0,  'range': '-',  'percentage': 11.9}
-  },
   'India Today-Axis': {
-    'SAD-BJP': { 'seats': 12, 'range': '11-15', 'percentage': 34},
-    'CONG': { 'seats': 62, 'range': '60-65', 'percentage': 31},
-    'AAP': { 'seats': 42,  'range': '41-44',  'percentage': 24},
-    'OTH': { 'seats': 1,  'range': '0-2',  'percentage': 11}
+    'BJP': { 'seats': 42, 'range': '40-44', 'percentage': 34},
+    'CONG': { 'seats': 25, 'range': '23-27', 'percentage': 31},
+    'OTH': { 'seats': 3,  'range': '1-4',  'percentage': 11}
   },
-  'Lokniti-ABP-CSDS': {
-    'SAD-BJP': { 'seats': 55, 'range': '50-58', 'percentage': 35},
-    'CONG': { 'seats': 46, 'range': '41-49', 'percentage': 29},
-    'AAP': { 'seats': 16,  'range': '12-18',  'percentage': 23},
+  'Uttarakhand Post': {
+    'BJP': { 'seats': 29, 'range': '29', 'percentage': 35},
+    'CONG': { 'seats': 36, 'range': '36', 'percentage': 29},
+    'OTH': { 'seats': 5,  'range': '5',  'percentage': 0}
+  },
+  'ABP News-Lokniti': {
+    'BJP': { 'seats': 42, 'range': '35-43', 'percentage': 35},
+    'CONG': { 'seats': 28, 'range': '22-30', 'percentage': 32},
     'OTH': { 'seats': 0,  'range': '-',  'percentage': 0}
-  },
-  'VDPAssociates': {
-    'SAD-BJP': { 'seats': 6, 'range': '6', 'percentage': 35},
-    'CONG': { 'seats': 15, 'range': '15', 'percentage': 32},
-    'AAP': { 'seats': 93,  'range': '93',  'percentage': 22},
-    'OTH': { 'seats': 3,  'range': '3',  'percentage': 0}
-  },
-  'TV24 India': {
-    'SAD-BJP': { 'seats': 20, 'range': '20-25', 'percentage': 41.4},
-    'CONG': { 'seats': 27, 'range': '27-35', 'percentage': 23.5},
-    'AAP': { 'seats': 70,  'range': '70-80',  'percentage': 24},
-    'OTH': { 'seats': 0,  'range': '-',  'percentage': 5}
   }
 }
 
@@ -66,10 +51,10 @@ var xscale = d3.scalePoint()
     .padding(0.5)
 
 // Set Radius, spacing between clusters and nodes
-var node_radius = 5,
+var node_radius = 6,
     padding = 0.8,
     cluster_padding = 10,
-    num_nodes = 117
+    num_nodes = 70
 
 var foci = {
   'center': { x: width / 2, y: height/2, color: '#555'}
