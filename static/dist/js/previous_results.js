@@ -54,11 +54,6 @@ function drawbars() {
       .ticks(4)
       .tickSize(-box_width)
 
-  // Color-Scale
-  var color = d3.scaleOrdinal()
-      .domain(['BJP', 'CONG', 'AAP', 'OTH', 'SP-CONG', 'BSP', 'SP'])
-      .range(['#F97D09', '#23cdc7', '#29bf10', '#999', '#FE0000', '#22409A', '#FE0000'])
-
   // Create Bar Chart
   var bars = box_svg
       .selectAll('rect.bar').data(c => c.values)

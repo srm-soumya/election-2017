@@ -6,8 +6,8 @@ var previous_data
 
 // Color-Scale
 var color = d3.scaleOrdinal()
-    .domain(['BJP', 'CONG', 'AAP', 'OTH', 'SP-CONG', 'BSP', 'SP'])
-    .range(['#F97D09', '#23cdc7', '#29bf10', '#999', '#FE0000', '#22409A', '#FE0000'])
+    .domain(['BJP', 'CONG', 'AAP', 'OTH', 'SP-CONG', 'BSP', 'SP', 'SAD', 'SAD-BJP'])
+    .range(['#F97D09', '#23cdc7', '#29bf10', '#999', '#FE0000', '#22409A', '#FE0000', '#22409A', '#F97D09'])
 
 function render(data) {
   state = data['state']

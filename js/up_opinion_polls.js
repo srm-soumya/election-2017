@@ -13,35 +13,35 @@ var svg = d3.select('#opinion-polls').append('svg')
 
 // Structure of Data
 var opinion_data = {
+  'HuffPost-CVoter': {
+    'SAD-BJP': { 'seats': 11, 'range': '11', 'percentage': 34.8},
+    'CONG': { 'seats': 43, 'range': '43', 'percentage': 33.2},
+    'AAP': { 'seats': 63,  'range': '63',  'percentage': 20.1},
+    'OTH': { 'seats': 0,  'range': '-',  'percentage': 11.9}
+  },
   'India Today-Axis': {
-    'BJP': { 'seats': 186, 'range': '180-191', 'percentage': 34.8},
-    'SP-CONG': { 'seats': 173, 'range': '168-178', 'percentage': 33.2},
-    'BSP': { 'seats': 41,  'range': '39-42',  'percentage': 20.1},
-    'OTH': { 'seats': 3,  'range': '1-4',  'percentage': 11.9}
+    'SAD-BJP': { 'seats': 12, 'range': '11-15', 'percentage': 34},
+    'CONG': { 'seats': 62, 'range': '60-65', 'percentage': 31},
+    'AAP': { 'seats': 42,  'range': '41-44',  'percentage': 24},
+    'OTH': { 'seats': 1,  'range': '0-2',  'percentage': 11}
   },
-  'Times Now-VMR': {
-    'BJP': { 'seats': 202, 'range': '202', 'percentage': 34},
-    'SP-CONG': { 'seats': 147, 'range': '147', 'percentage': 31},
-    'BSP': { 'seats': 47,  'range': '47',  'percentage': 24},
-    'OTH': { 'seats': 7,  'range': '7',  'percentage': 11}
-  },
-  'ABP News-Lokniti': {
-    'BJP': { 'seats': 126, 'range': '118-128', 'percentage': 35},
-    'SP-CONG': { 'seats': 194, 'range': '187-197', 'percentage': 29},
-    'BSP': { 'seats': 83,  'range': '76-86',  'percentage': 23},
+  'Lokniti-ABP-CSDS': {
+    'SAD-BJP': { 'seats': 55, 'range': '50-58', 'percentage': 35},
+    'CONG': { 'seats': 46, 'range': '41-49', 'percentage': 29},
+    'AAP': { 'seats': 16,  'range': '12-18',  'percentage': 23},
     'OTH': { 'seats': 0,  'range': '-',  'percentage': 0}
   },
   'VDPAssociates': {
-    'BJP': { 'seats': 207, 'range': '207', 'percentage': 35},
-    'SP-CONG': { 'seats': 128, 'range': '128', 'percentage': 32},
-    'BSP': { 'seats': 58,  'range': '58',  'percentage': 22},
-    'OTH': { 'seats': 0,  'range': '-',  'percentage': 0}
+    'SAD-BJP': { 'seats': 6, 'range': '6', 'percentage': 35},
+    'CONG': { 'seats': 15, 'range': '15', 'percentage': 32},
+    'AAP': { 'seats': 93,  'range': '93',  'percentage': 22},
+    'OTH': { 'seats': 3,  'range': '3',  'percentage': 0}
   },
-  'THE WEEK-Hansa Research': {
-    'BJP': { 'seats': 194, 'range': '192-196', 'percentage': 41.4},
-    'SP-CONG': { 'seats': 180, 'range': '178-182', 'percentage': 23.5},
-    'BSP': { 'seats': 22,  'range': '20-24',  'percentage': 24},
-    'OTH': { 'seats': 7,  'range': '5-9',  'percentage': 5}
+  'TV24 India': {
+    'SAD-BJP': { 'seats': 20, 'range': '20-25', 'percentage': 41.4},
+    'CONG': { 'seats': 27, 'range': '27-35', 'percentage': 23.5},
+    'AAP': { 'seats': 70,  'range': '70-80',  'percentage': 24},
+    'OTH': { 'seats': 0,  'range': '-',  'percentage': 5}
   }
 }
 
@@ -66,10 +66,10 @@ var xscale = d3.scalePoint()
     .padding(0.5)
 
 // Set Radius, spacing between clusters and nodes
-var node_radius = 3,
+var node_radius = 5,
     padding = 0.8,
     cluster_padding = 10,
-    num_nodes = 403
+    num_nodes = 117
 
 var foci = {
   'center': { x: width / 2, y: height/2, color: '#555'}
