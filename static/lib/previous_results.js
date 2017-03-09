@@ -71,9 +71,14 @@ function drawbars() {
     .enter().append('rect')
       .attr('x', d => box_xscale(d.party))
       .attr('width', box_xscale.bandwidth())
+      .attr('y', 0)
+      .attr('height', box_height)
+      .attr('fill', d => color(d.party))
+    .transition()
+      .delay(500)
+      .duration(1500)
       .attr('y', d => box_yscale(d.wins))
       .attr('height', d => (box_height - box_yscale(d.wins)))
-      .attr('fill', d => color(d.party))
 
   // Bar Labels
   var bars_label = box_svg
@@ -84,4 +89,9 @@ function drawbars() {
       .attr('text-anchor', 'middle')
       .attr('dy', '-0.35rem')
       .text(d => d.wins)
+      .attr('opacity', 0)
+    .transition()
+      .delay(2000)
+      .duration(500)
+      .attr('opacity', 1)
 }
