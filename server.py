@@ -1,7 +1,7 @@
 import os
 import tornado.web
 from tornado.ioloop import IOLoop
-from handlers import BaseHandler, OpinionHandler, OpinionDataHandler
+from handlers import BaseHandler, OpinionHandler, OpinionDataHandler, ExitHandler, ExitDataHandler
 
 
 class Application(tornado.web.Application):
@@ -10,7 +10,9 @@ class Application(tornado.web.Application):
         handlers = [
             (r'/', BaseHandler),
             (r'/opinion-poll/?', OpinionHandler),
-            (r'/opinion-poll/data/?', OpinionDataHandler)
+            (r'/opinion-poll/data/?', OpinionDataHandler),
+            (r'/exit-poll/?', ExitHandler),
+            (r'/exit-poll/data/?', ExitDataHandler)
         ]
 
         settings = {

@@ -1,5 +1,5 @@
 function drawforce() {
-  d3.select('.opinion-poll-svg').remove()
+  d3.select('.stat-poll-svg').remove()
   d3.selectAll('button.agency').remove()
 
   // Set the margin, width & height for Opinion Polls
@@ -8,8 +8,8 @@ function drawforce() {
       height = 250 - margin.top - margin.bottom
 
   // Create SVG and add to the page
-  var svg = d3.select('#opinion-polls').append('svg')
-      .classed('opinion-poll-svg', true)
+  var svg = d3.select('#stat-polls').append('svg')
+      .classed('stat-poll-svg', true)
       .attr('width', width + margin.left + margin.right)
       .attr('height', height + margin.top + margin.bottom)
       .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)

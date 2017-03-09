@@ -54,6 +54,21 @@
       width: 100%;
     }
 
+    .links {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .links .subsection {
+      margin-right: 1rem;
+    }
+    .links .subtitle {
+      font-weight: bold;
+      font-size: 1rem;
+      color: #111;
+      margin: 1rem 0;
+    }
+
     @media (min-width: 768px) {
       .header {
         font-size: 8rem;
@@ -68,6 +83,13 @@
       .summary {
         font-size: 1.5rem;
       }
+      .links {
+        flex-wrap: nowrap;
+      }
+      .links .subtitle {
+        font-size: 2.2rem;
+        margin: 1.5rem 0;
+      }
     }
   </style>
 </head>
@@ -79,8 +101,19 @@
     <div class="section-1">
       <div class="title">Assembly Elections 2017</div>
       <div class="summary">With Five Indian States battling out for glory, click on the visual below to see which party is likely to make it to the top !</div>
-      <div class="image">
-        <a href="./opinion-poll/"><img src="{{ static_url('img/election-2017.PNG') }}" alt="Election Visualization"></a>
+      <div class="links">
+        <div class="subsection">
+          <div class="subtitle">Exit-Poll</div>
+          <div class="image">
+            <a href="./exit-poll/"><img src="{{ static_url('img/election-2017.PNG') }}" alt="Election Visualization"></a>
+          </div>
+        </div>
+        <div class="subsection">
+          <div class="subtitle">Opinion-Poll</div>
+          <div class="image">
+            <a href="./opinion-poll/"><img src="{{ static_url('img/election-2017.PNG') }}" alt="Election Visualization"></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

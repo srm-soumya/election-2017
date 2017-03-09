@@ -1,16 +1,16 @@
 body {
   font-family: 'Roboto Mono', monospace;
 }
-.header, .opinion-header, .previous-header, #previous-results, #opinion-polls, #agency-list {
+.header, .stat-header, .previous-header, #previous-results, #stat-polls, #agency-list {
   display: flex;
   flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.7);
   justify-content: center;
 }
-.header h1, .opinion-header h1, .previous-header h1{
+.header h1, .stat-header h1, .previous-header h1{
   margin: 0.75rem 0;
 }
-.opinion-header h1, .previous-header h1 {
+.stat-header h1, .previous-header h1 {
   font-size: 1.15rem;
 }
 #previous-results .chart {
@@ -60,7 +60,7 @@ select#state:focus { outline: 0 }
 }
 
 @media (max-width: 500px) {
-  .header h1, .opinion-header h1, .previous-header h1 {
+  .header h1, .stat-header h1, .previous-header h1 {
     font-size: 0.9rem;
     margin: 0.25rem 0;
   }

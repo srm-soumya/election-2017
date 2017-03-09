@@ -23,7 +23,7 @@
       <h1><span id="state-name"></span> Assembly Election - <span id="num-seats"></span> seats</h1>
     </div>
     <div class="stat-header">
-      <h1>Opinion Poll - 2017</h1>
+      <h1>Exit Poll - 2017</h1>
     </div>
     <div id="agency-list"></div>
     <div id="stat-polls"></div>
@@ -59,7 +59,7 @@
       $('#num-seats').html(seats)
       $.ajax({
         type: 'GET',
-        url: `/opinion-poll/data/?state=${option}`,
+        url: `/exit-poll/data/?state=${option}`,
         dataType: 'JSON'
       })
       .done((response) => {
