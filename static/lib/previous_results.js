@@ -75,7 +75,7 @@ function drawbars() {
       .attr('height', box_height)
       .attr('fill', d => color(d.party))
     .transition()
-      .delay(500)
+      .delay(1200)
       .duration(1500)
       .attr('y', d => box_yscale(d.wins))
       .attr('height', d => (box_height - box_yscale(d.wins)))
@@ -91,7 +91,7 @@ function drawbars() {
       .text(d => d.wins)
       .attr('opacity', 0)
     .transition()
-      .delay(2000)
+      .delay(3000)
       .duration(500)
       .attr('opacity', 1)
 }

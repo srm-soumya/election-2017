@@ -160,8 +160,6 @@ function drawforce() {
     var agency = d3.select(this).classed('active', true).attr('id')
     var agency_data = opinion_data[agency]
 
-    console.log('agency', agency_data)
-
     var winner = agency_data[parties[0]]
     winner['party'] = parties[0]
     parties.forEach((party) => {
