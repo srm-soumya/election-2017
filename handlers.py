@@ -29,3 +29,8 @@ class ExitDataHandler(tornado.web.RequestHandler):
         state = self.get_argument('state', 'goa')
         data = pd.read_json('data/exit-data.json')
         self.write(data[state].to_json())
+
+
+class VoterTOHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render('voter-turnout.html')
