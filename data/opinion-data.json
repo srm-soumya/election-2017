@@ -1,0 +1,252 @@
+{
+  "goa":
+  {
+    "state": "GOA",
+    "num_constituency": 40,
+    "node_radius": 7,
+    "opinion-poll-data":
+    {
+      "HuffPost-CVoter": {
+        "BJP": { "seats": 15, "range": "15", "percentage": 31},
+        "CONG": { "seats": 14, "range": "14", "percentage": 26},
+        "AAP": { "seats": 2,  "range": "2",  "percentage": 13.2},
+        "OTH": { "seats": 9,  "range": "9",  "percentage": 29.8}
+      },
+      "India Today-Axis": {
+        "BJP": { "seats": 23, "range": "22-25", "percentage": 46},
+        "CONG": { "seats": 13, "range": "12-14", "percentage": 25},
+        "AAP": { "seats": 2,  "range": "1-2",  "percentage": 10},
+        "OTH": { "seats": 2,  "range": "1-5",  "percentage": 20}
+      },
+      "Kautilya": {
+        "BJP": { "seats": 11, "range": "11", "percentage": 46},
+        "CONG": { "seats": 7, "range": "7", "percentage": 25},
+        "AAP": { "seats": 14,  "range": "14",  "percentage": 10},
+        "OTH": { "seats": 8,  "range": "8",  "percentage": 20}
+      },
+      "Prudent Media": {
+        "BJP": { "seats": 18, "range": "17-18", "percentage": 46},
+        "CONG": { "seats": 13, "range": "12-13", "percentage": 25},
+        "AAP": { "seats": 5,  "range": "4-5",  "percentage": 10},
+        "OTH": { "seats": 4,  "range": "4-5",  "percentage": 20}
+      },
+      "VDPAssociates": {
+        "BJP": { "seats": 22, "range": "22", "percentage": 41.4},
+        "CONG": { "seats": 6, "range": "6", "percentage": 23.5},
+        "AAP": { "seats": 9,  "range": "9",  "percentage": 24},
+        "OTH": { "seats": 3,  "range": "2-3",  "percentage": 5}
+      }
+    },
+    "previous-year-data":
+    {
+      "one": [
+        {"year": 2002, "party": "BJP", "wins": 17},
+        {"year": 2002, "party": "CONG", "wins": 16},
+        {"year": 2002, "party": "AAP", "wins": 0},
+        {"year": 2002, "party": "OTH", "wins": 7},
+        {"year": 2007, "party": "BJP", "wins": 14},
+        {"year": 2007, "party": "CONG", "wins": 16},
+        {"year": 2007, "party": "AAP", "wins": 0},
+        {"year": 2007, "party": "OTH", "wins": 10},
+        {"year": 2012, "party": "BJP", "wins": 21},
+        {"year": 2012, "party": "CONG", "wins": 9},
+        {"year": 2012, "party": "AAP", "wins": 0},
+        {"year": 2012, "party": "OTH", "wins": 10}
+      ]
+    }
+  },
+  "punjab":
+  {
+    "state": "PUNJAB",
+    "num_constituency": 117,
+    "node_radius": 5,
+    "opinion-poll-data":
+    {
+      "HuffPost-CVoter": {
+        "SAD-BJP": { "seats": 11, "range": "11", "percentage": 34.8},
+        "CONG": { "seats": 43, "range": "43", "percentage": 33.2},
+        "AAP": { "seats": 63,  "range": "63",  "percentage": 20.1},
+        "OTH": { "seats": 0,  "range": "-",  "percentage": 11.9}
+      },
+      "India Today-Axis": {
+        "SAD-BJP": { "seats": 12, "range": "11-15", "percentage": 34},
+        "CONG": { "seats": 62, "range": "60-65", "percentage": 31},
+        "AAP": { "seats": 42,  "range": "41-44",  "percentage": 24},
+        "OTH": { "seats": 1,  "range": "0-2",  "percentage": 11}
+      },
+      "Lokniti-ABP-CSDS": {
+        "SAD-BJP": { "seats": 55, "range": "50-58", "percentage": 35},
+        "CONG": { "seats": 46, "range": "41-49", "percentage": 29},
+        "AAP": { "seats": 16,  "range": "12-18",  "percentage": 23},
+        "OTH": { "seats": 0,  "range": "-",  "percentage": 0}
+      },
+      "VDPAssociates": {
+        "SAD-BJP": { "seats": 6, "range": "6", "percentage": 35},
+        "CONG": { "seats": 15, "range": "15", "percentage": 32},
+        "AAP": { "seats": 93,  "range": "93",  "percentage": 22},
+        "OTH": { "seats": 3,  "range": "3",  "percentage": 0}
+      },
+      "TV24 India": {
+        "SAD-BJP": { "seats": 20, "range": "20-25", "percentage": 41.4},
+        "CONG": { "seats": 27, "range": "27-35", "percentage": 23.5},
+        "AAP": { "seats": 70,  "range": "70-80",  "percentage": 24},
+        "OTH": { "seats": 0,  "range": "-",  "percentage": 5}
+      }
+    },
+    "previous-year-data":
+    {
+      "one":
+      [
+        {"year": 2002, "party": "BJP", "wins": 3},
+        {"year": 2002, "party": "CONG", "wins": 62},
+        {"year": 2002, "party": "SAD", "wins": 41},
+        {"year": 2002, "party": "AAP", "wins": 0},
+        {"year": 2002, "party": "OTH", "wins": 11},
+        {"year": 2007, "party": "BJP", "wins": 19},
+        {"year": 2007, "party": "CONG", "wins": 44},
+        {"year": 2007, "party": "SAD", "wins": 48},
+        {"year": 2007, "party": "AAP", "wins": 0},
+        {"year": 2007, "party": "OTH", "wins": 5},
+        {"year": 2012, "party": "BJP", "wins": 12},
+        {"year": 2012, "party": "CONG", "wins": 46},
+        {"year": 2012, "party": "SAD", "wins": 56},
+        {"year": 2012, "party": "AAP", "wins": 0},
+        {"year": 2012, "party": "OTH", "wins": 3}
+      ]
+    }
+  },
+  "up":
+  {
+    "state": "UTTAR PRADESH",
+    "num_constituency": 403,
+    "node_radius": 3,
+    "opinion-poll-data":
+    {
+      "India Today-Axis": {
+        "BJP": { "seats": 186, "range": "180-191", "percentage": 34.8},
+        "SP-CONG": { "seats": 173, "range": "168-178", "percentage": 33.2},
+        "BSP": { "seats": 41,  "range": "39-42",  "percentage": 20.1},
+        "OTH": { "seats": 3,  "range": "1-4",  "percentage": 11.9}
+      },
+      "Times Now-VMR": {
+        "BJP": { "seats": 202, "range": "202", "percentage": 34},
+        "SP-CONG": { "seats": 147, "range": "147", "percentage": 31},
+        "BSP": { "seats": 47,  "range": "47",  "percentage": 24},
+        "OTH": { "seats": 7,  "range": "7",  "percentage": 11}
+      },
+      "ABP News-Lokniti": {
+        "BJP": { "seats": 126, "range": "118-128", "percentage": 35},
+        "SP-CONG": { "seats": 194, "range": "187-197", "percentage": 29},
+        "BSP": { "seats": 83,  "range": "76-86",  "percentage": 23},
+        "OTH": { "seats": 0,  "range": "-",  "percentage": 0}
+      },
+      "VDPAssociates": {
+        "BJP": { "seats": 207, "range": "207", "percentage": 35},
+        "SP-CONG": { "seats": 128, "range": "128", "percentage": 32},
+        "BSP": { "seats": 58,  "range": "58",  "percentage": 22},
+        "OTH": { "seats": 10,  "range": "10",  "percentage": 0}
+      },
+      "THE WEEK-Hansa Research": {
+        "BJP": { "seats": 194, "range": "192-196", "percentage": 41.4},
+        "SP-CONG": { "seats": 180, "range": "178-182", "percentage": 23.5},
+        "BSP": { "seats": 22,  "range": "20-24",  "percentage": 24},
+        "OTH": { "seats": 7,  "range": "5-9",  "percentage": 5}
+      }
+    },
+    "previous-year-data":
+    {
+      "one":
+      [
+        {"year": 2002, "party": "BJP", "wins": 88},
+        {"year": 2002, "party": "CONG", "wins": 25},
+        {"year": 2002, "party": "SP", "wins": 143},
+        {"year": 2002, "party": "BSP", "wins": 98},
+        {"year": 2002, "party": "OTH", "wins": 49},
+        {"year": 2007, "party": "BJP", "wins": 51},
+        {"year": 2007, "party": "CONG", "wins": 22},
+        {"year": 2007, "party": "SP", "wins": 97},
+        {"year": 2007, "party": "BSP", "wins": 206},
+        {"year": 2007, "party": "OTH", "wins": 27},
+        {"year": 2012, "party": "BJP", "wins": 47},
+        {"year": 2012, "party": "CONG", "wins": 28},
+        {"year": 2012, "party": "SP", "wins": 224},
+        {"year": 2012, "party": "BSP", "wins": 80},
+        {"year": 2012, "party": "OTH", "wins": 24}
+      ]
+    }
+  },
+  "uttarakhand":
+  {
+    "state": "UTTARAKHAND",
+    "num_constituency": 70,
+    "node_radius": 6,
+    "opinion-poll-data":
+    {
+      "India Today-Axis": {
+        "BJP": { "seats": 42, "range": "40-44", "percentage": 34},
+        "CONG": { "seats": 25, "range": "23-27", "percentage": 31},
+        "OTH": { "seats": 3,  "range": "1-4",  "percentage": 11}
+      },
+      "Uttarakhand Post": {
+        "BJP": { "seats": 29, "range": "29", "percentage": 35},
+        "CONG": { "seats": 36, "range": "36", "percentage": 29},
+        "OTH": { "seats": 5,  "range": "5",  "percentage": 0}
+      },
+      "ABP News-Lokniti": {
+        "BJP": { "seats": 42, "range": "35-43", "percentage": 35},
+        "CONG": { "seats": 28, "range": "22-30", "percentage": 32},
+        "OTH": { "seats": 0,  "range": "-",  "percentage": 0}
+      }
+    },
+    "previous-year-data":
+    {
+      "one":
+      [
+        {"year": 2002, "party": "BJP", "wins": 19},
+        {"year": 2002, "party": "CONG", "wins": 36},
+        {"year": 2002, "party": "OTH", "wins": 15},
+        {"year": 2007, "party": "BJP", "wins": 34},
+        {"year": 2007, "party": "CONG", "wins": 21},
+        {"year": 2007, "party": "OTH", "wins": 14},
+        {"year": 2012, "party": "BJP", "wins": 31},
+        {"year": 2012, "party": "CONG", "wins": 32},
+        {"year": 2012, "party": "OTH", "wins": 7}
+      ]
+    }
+  },
+  "manipur":
+  {
+    "state": "MANIPUR",
+    "num_constituency": 60,
+    "node_radius": 7,
+    "opinion-poll-data":
+    {
+      "HuffPost-CVoter": {
+        "BJP": { "seats": 23, "range": "19-27", "percentage": 34},
+        "CONG": { "seats": 19, "range": "15-23", "percentage": 31},
+        "OTH": { "seats": 18,  "range": "14-22",  "percentage": 11}
+      },
+      "India Today-Axis": {
+        "BJP": { "seats": 33, "range": "31-35", "percentage": 34},
+        "CONG": { "seats": 22, "range": "19-24", "percentage": 31},
+        "OTH": { "seats": 5,  "range": "3-8",  "percentage": 11}
+      }
+    },
+    "previous-year-data":
+    {
+      "one":
+      [
+        {"year": 2002, "party": "BJP", "wins": 4},
+        {"year": 2002, "party": "CONG", "wins": 20},
+        {"year": 2002, "party": "OTH", "wins": 36},
+        {"year": 2007, "party": "BJP", "wins": 0},
+        {"year": 2007, "party": "CONG", "wins": 30},
+        {"year": 2007, "party": "OTH", "wins": 30},
+        {"year": 2012, "party": "BJP", "wins": 0},
+        {"year": 2012, "party": "CONG", "wins": 42},
+        {"year": 2012, "party": "OTH", "wins": 18}
+      ]
+    }
+  }
+}
+
