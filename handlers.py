@@ -39,3 +39,13 @@ class VoterTOHandler(tornado.web.RequestHandler):
 class TurnoutHandler(tornado.web.RequestHandler):
     def get(self):
         self.render('turnout-change.html')
+
+class TableHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render('table.html')
+
+class FetchResults(tornado.web.RequestHandler):
+    def get(self):
+        data = pd.read_csv('data/results-all.csv')
+        self.write(data.to_json(orient='records'))
+

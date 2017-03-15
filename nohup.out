@@ -1,0 +1,130 @@
+Traceback (most recent call last):
+  File "server.py", line 36, in <module>
+    main()
+  File "server.py", line 31, in main
+    app.listen(80)
+  File "/home/soumya/miniconda3/lib/python3.6/site-packages/tornado/web.py", line 1850, in listen
+    server.listen(port, address)
+  File "/home/soumya/miniconda3/lib/python3.6/site-packages/tornado/tcpserver.py", line 126, in listen
+    sockets = bind_sockets(port, address=address)
+  File "/home/soumya/miniconda3/lib/python3.6/site-packages/tornado/netutil.py", line 194, in bind_sockets
+    sock.bind(sockaddr)
+PermissionError: [Errno 13] Permission denied
+WARNING:tornado.access:404 GET /favicon.ico (124.123.73.92) 3.44ms
+Traceback (most recent call last):
+  File "server.py", line 37, in <module>
+    main()
+  File "server.py", line 33, in main
+    IOLoop.instance().start()
+  File "/home/soumya/miniconda3/lib/python3.6/site-packages/tornado/ioloop.py", line 862, in start
+    event_pairs = self._impl.poll(poll_timeout)
+KeyboardInterrupt
+WARNING:tornado.access:404 GET /robots.txt (95.34.24.124) 4.15ms
+WARNING:tornado.access:404 GET /favicon.ico (42.109.131.253) 3.53ms
+WARNING:tornado.access:404 GET /favicon.ico (124.123.73.92) 3.37ms
+ERROR:tornado.general:Could not open static file '/home/soumya/git/election-2017/static/data/up.geojson'
+ERROR:tornado.general:Could not open static file '/home/soumya/git/election-2017/static/data/up.geojson'
+WARNING:tornado.access:404 GET /results (124.123.73.92) 4.65ms
+WARNING:tornado.access:404 GET /favicon.ico (124.123.73.92) 2.19ms
+ERROR:tornado.general:Could not open static file '/home/soumya/git/election-2017/static/data/up.geojson'
+WARNING:tornado.access:404 GET /results (124.123.73.92) 2.54ms
+ERROR:tornado.general:Could not open static file '/home/soumya/git/election-2017/static/data/up.geojson'
+WARNING:tornado.access:404 GET /static/data/up.geojson (124.123.73.92) 4.36ms
+ERROR:tornado.general:Could not open static file '/home/soumya/git/election-2017/static/data/up.geojson'
+WARNING:tornado.access:404 GET /static/data/up.geojson (124.123.73.92) 4.15ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (173.212.199.29) 6.33ms
+WARNING:tornado.access:404 GET /favicon.ico (42.109.130.189) 5.40ms
+WARNING:tornado.access:404 GET /favicon.ico (42.111.175.163) 2.49ms
+WARNING:tornado.access:404 GET /favicon.ico (42.109.130.189) 6.62ms
+WARNING:tornado.access:404 GET /favicon.ico (64.233.173.152) 3.11ms
+WARNING:tornado.access:404 GET /favicon.ico (49.206.166.122) 4.99ms
+WARNING:tornado.access:404 GET /favicon.ico (124.123.177.115) 4.85ms
+WARNING:tornado.access:404 GET /favicon.ico (59.165.151.3) 4.95ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (192.99.193.228) 2.94ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (192.99.144.140) 3.71ms
+WARNING:tornado.access:404 GET /robots.txt (66.249.73.231) 10.54ms
+WARNING:tornado.access:404 GET /static/img/election-2017.PNG?v=835269279d2488a036cb04a8fd50cdcd (173.252.90.108) 3.33ms
+WARNING:tornado.access:404 GET /wp-login.php (54.208.76.229) 4.66ms
+WARNING:tornado.access:404 GET /administrator/ (54.208.76.229) 1.19ms
+WARNING:tornado.access:404 GET /robots.txt (52.86.176.3) 6.72ms
+WARNING:tornado.access:404 GET /robots.txt (151.80.39.116) 11.04ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (173.212.199.29) 3.42ms
+WARNING:tornado.access:404 GET /robots.txt (66.249.73.139) 7.00ms
+WARNING:tornado.access:404 GET /robots.txt (216.145.14.142) 5.33ms
+WARNING:tornado.access:404 GET /robots.txt (157.55.39.251) 6.12ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (190.129.24.154) 3.22ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 5.53ms
+WARNING:tornado.access:404 GET /robots.txt (66.249.65.186) 4.35ms
+WARNING:tornado.access:404 GET /robots.txt (66.249.73.228) 7.26ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (170.0.236.103) 4.08ms
+WARNING:tornado.access:404 GET /robots.txt (5.255.250.30) 3.51ms
+WARNING:tornado.access:404 GET /user/soapCaller.bs (142.0.41.2) 3.06ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (170.0.236.103) 4.62ms
+WARNING:tornado.access:404 GET /wp-login.php (52.204.16.151) 14.01ms
+WARNING:tornado.access:404 GET /administrator/ (52.204.16.151) 0.98ms
+WARNING:tornado.access:404 GET /static/dist/css/opinion-poll-style.css?v=303f34ced27cdb30da3c910ffcb7c960 (66.249.65.186) 4.22ms
+WARNING:tornado.access:404 GET /x (141.212.122.128) 3.15ms
+WARNING:tornado.access:404 GET /favicon.ico (171.48.8.163) 3.37ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 5.04ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (192.99.144.140) 4.82ms
+WARNING:tornado.access:404 GET /robots.txt (207.46.13.228) 7.36ms
+WARNING:tornado.access:404 GET /language/en-GB/en-GB.xml (52.168.175.163) 3.17ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (173.212.199.29) 6.58ms
+WARNING:tornado.access:404 GET /favicon.ico (171.48.8.163) 4.15ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (192.99.193.228) 3.65ms
+WARNING:tornado.access:404 GET /robots.txt (66.249.64.16) 6.96ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (190.129.24.154) 4.02ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 3.21ms
+WARNING:tornado.access:404 GET /robots.txt (66.249.64.182) 5.11ms
+WARNING:tornado.access:404 GET /robots.txt (185.57.81.38) 6.16ms
+WARNING:tornado.access:404 GET /static/img/election-2017.PNG?v=835269279d2488a036cb04a8fd50cdcd (173.252.90.96) 4.69ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 4.20ms
+WARNING:tornado.access:404 GET /robots.txt (5.255.250.30) 4.26ms
+WARNING:tornado.access:404 GET /favicon.ico (106.51.129.95) 6.95ms
+WARNING:tornado.access:404 GET /robots.txt (66.249.64.46) 7.37ms
+WARNING:tornado.access:404 GET /favicon.ico (64.233.173.151) 4.08ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (190.129.35.239) 3.38ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 4.61ms
+WARNING:tornado.access:404 GET /favicon.ico (111.93.26.74) 4.57ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (190.129.24.154) 2.21ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (192.99.193.228) 1.60ms
+WARNING:tornado.access:404 GET /favicon.ico (27.7.26.17) 4.38ms
+WARNING:tornado.access:404 GET /robots.txt (5.255.250.30) 6.72ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 7.07ms
+WARNING:tornado.access:404 GET /static/img/election-2017.PNG?v=835269279d2488a036cb04a8fd50cdcd (173.252.90.123) 5.22ms
+WARNING:tornado.access:404 GET /script (221.194.44.252) 3.39ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (173.212.199.29) 4.77ms
+WARNING:tornado.access:404 HEAD /phpmyadmin/index.php (203.113.10.12) 3.27ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 4.92ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (170.0.236.103) 3.06ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (190.129.24.154) 1.92ms
+WARNING:tornado.access:404 GET /robots.txt (66.249.66.180) 5.01ms
+WARNING:tornado.access:404 GET /static/dist/css/opinion-poll-style.css?v=303f34ced27cdb30da3c910ffcb7c960 (66.249.66.183) 1.04ms
+WARNING:tornado.access:404 GET /favicon.ico (61.12.75.180) 5.43ms
+WARNING:tornado.access:404 GET /robots.txt (5.255.250.30) 4.47ms
+WARNING:tornado.access:404 GET /robots.txt (66.249.66.37) 8.14ms
+WARNING:tornado.access:404 GET /gkkaccxiknzkbttx.html (66.249.66.40) 0.90ms
+WARNING:tornado.access:404 GET /favicon.ico (111.93.26.74) 5.16ms
+WARNING:tornado.access:404 GET /robots.txt (180.76.15.143) 1.10ms
+WARNING:tornado.access:404 GET /robots.txt (180.76.15.9) 1.08ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 5.56ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (190.129.24.154) 3.00ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (176.31.134.236) 5.67ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (192.99.144.140) 4.81ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 4.50ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (173.212.199.29) 1.59ms
+WARNING:tornado.access:404 GET /robots.txt (5.255.250.30) 3.42ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (192.99.144.140) 15.54ms
+WARNING:tornado.access:404 GET /robots.txt (207.46.13.226) 4.45ms
+WARNING:tornado.access:405 CONNECT lqak.euw1.lol.riotgames.com:443 (195.154.226.17) 3.39ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (149.56.43.95) 1.58ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (170.0.236.103) 1.56ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (192.99.144.140) 19.04ms
+WARNING:tornado.access:405 PROPFIND /webdav/ (192.99.144.140) 4.40ms
+WARNING:tornado.access:404 GET /favicon.ico (122.172.182.77) 3.57ms
+WARNING:tornado.access:404 GET /google3dd2d258ff37617e.html (66.102.7.188) 4.36ms
+WARNING:tornado.access:404 GET /google3dd2d258ff37617e.html (66.102.7.188) 1.33ms
+WARNING:tornado.access:404 GET /google42deecd99132551d.html (66.102.7.187) 0.84ms
+WARNING:tornado.access:404 GET /google42deecd99132551d.html (66.102.7.187) 1.22ms
+WARNING:tornado.access:404 GET /google3dd2d258ff37617e.html (66.102.7.189) 1.87ms
+WARNING:tornado.access:404 GET /google42deecd99132551d.html (66.102.7.188) 1.19ms
