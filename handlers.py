@@ -34,3 +34,8 @@ class ExitDataHandler(tornado.web.RequestHandler):
 class VoterTOHandler(tornado.web.RequestHandler):
     def get(self):
         self.render('voter-turnout.html')
+
+
+class TurnoutHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.render('turnout-change.html')

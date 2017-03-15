@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voter turnout changes</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ static_url('dist/css/c3.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ static_url('dist/css/d3.parcoords.css') }}">
+  <style type="text/css">
+    #example {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    body {
+      font: 12px "Source Code Pro", Consolas, monaco, monospace;
+    }
+    .c3-axis-x {
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h4 class="text-center">Gender-based voter turnouts</h4>
+      <p class="text-center text-muted">
+        We are, increasingly, witnessing great rise in the women voters. In general, this holds true over the years. As diverse voters participate in the electoral process, we stand to represent diverse views in political domain.
+      </p>
+      <p class="text-muted">
+        You can toggle the male and female voter entries to view/filter individual categories.
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <h3>Uttar Pradesh</h3>
+        <div id="chart-up"></div>
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <h3>Uttarakhand</h3>
+        <div id="chart-uk"></div>
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <h3>Punjab</h3>
+        <div id="chart-pb"></div>
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <h3>Manipur</h3>
+        <div id="chart-mn"></div>
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <h3>Goa</h3>
+        <div id="chart-ga"></div>
+      </div>
+    </div>
+    <hr>
+    <div class="col-md-12 col-sm-12">
+      <p class="lead text-center">
+        How has the voter turnout changed for males and females?
+      </p>
+    </div>
+    <div class="row">
+      <div class="btn-group" role="group" aria-label="Voter turnout filters">
+        <button type="button" title="% of male electors who voted" class="btn btn-default active" data-btn="vt-m">Voter turnout % - Male</button>
+        <button type="button" title="% of female electors who voted" class="btn btn-default" data-btn="vt-fm">Voter turnout % - Female</button>
+        <button type="button" title="Change in % of male electors who voted" class="btn btn-default" data-btn="vt-mc">Voter turnout change % - Male</button>
+        <button type="button" title="Change in % of male electors who voted" class="btn btn-default" data-btn="vt-fmc">Voter turnout change % - Female</button>
+      </div>
+      <div class="col-sm-12 col-md-12">
+        <div id="example" class="parcoords text-center" style="width:600px; height:300px"></div>
+      </div>
+    </div>
+    <div class="row">
+      <h4 class="text-muted">Notes</h4>
+      <p class="text-muted">
+        <ul>
+          <li>
+            Uttarakhand: First elections were held in 2002, hence the voter change is represented as zero.
+          </li>
+          <li>
+            2002, 2007, 2012 election years are considered for all five states. In addition, election data for 1996, 1997, 2002 and 1999 are considered for Uttar Pradesh, Punjab, Manipur, Goa respectively.
+          </li>
+          <li>
+            Raw data can be accessed <a href="https://docs.google.com/spreadsheets/d/1II6jl3Zvm5w7ZfEFjAT6n0rv4Ge3SP2gMy2w_CH2x64/edit?usp=sharing" target="_blank">here</a>.
+          </li>
+        </ul>
+      </p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script type="text/javascript" src="{{ static_url('vendor/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ static_url('dist/js/c3.min.js') }}"></script>
+  <script src="{{ static_url('dist/js/d3.parcoords.js') }}"></script>
+  <script type="text/javascript">
+    // not convinced with small multiples for each state and absolute turnouts, % changes as filters
+
+    // 1) slope graph - change in voter turnout %
+    function parallelCoordinates(data) {
+      var filteredData = []
+      var filters = ["name", 2002, 2007, 2012]
+
+      data.forEach(function(item, itemKey) {
+        var temp = {}
+        filters.forEach(function(filter, filterKey) {
+          temp[filter] = item[filter]
+        })
+        filteredData.push(temp)
+      })
+
+      $("#example").children().remove()
+
+      var colors = {
+        "Uttar Pradesh": "teal",
+        "Uttarakhand": "turquoise",
+        "Punjab": "darkseagreen",
+        "Manipur": "steelblue",
+        "Goa": "tomato"
+      }
+
+      var color = function(d) { return colors[d["name"]]; }
+
+      var pc = d3.parcoords()("#example")
+        .color(color)
+        .data(filteredData)
+        .render()
+        .ticks(3)
+        .createAxes()
+    }
+
+    // 2) step chart - change in voter turnout (absolute)
+    function voteChange(state, element) {
+      var chart = c3.generate({
+        bindto: element,
+        data: {
+          x: 'Year',
+          columns: voteChangeData[state],
+          types: {
+              'Male voters change': 'area-step',
+              'Female voters change': 'area-step'
+          },
+          colors: {
+            'Male voters change': '#6f3662',
+            'Female voters change': '#00aaa0'
+          }
+        },
+        axis: {
+          x: {
+            tick: {
+              type: 'category',
+              categories: [2002, 2007, 2012]
+            }
+          },
+          y: {
+            label: 'Change in voter turnout'
+          }
+        },
+        transition: {
+          duration: 1000
+        },
+        title: state
+      });
+    }
+
+    var voteChangeData = {
+      // label, 2002, 2007, 2012, 2017
+      // uttar pradesh - voter turnout change from 2002 to 2012
+      "Uttar Pradesh": [
+        ['Year', '2002', '2007', '2012'],
+        ['Male voters change', -2408697, -654265, 10832477],
+        ['Female voters change', -155238, 273407, 368110]
+      ],
+      "Uttarakhand": [
+        ['Year', '2002', '2007', '2012'],
+        ['Male voters change', 0, 273407, 368110],
+        ['Female voters change', 0, 405687, 308604]
+      ],
+      "Punjab": [
+        ['Year', '2002', '2007', '2012'],
+        ['Male voters change', -87928, 1047763, 728243],
+        ['Female voters change', -72859, 1299800, 513897]
+      ],
+      "Manipur": [
+        ['Year', '2002', '2007', '2012'],
+        ['Male voters change', 25171, 59390, -48209],
+        ['Female voters change', 33602, 83860, -41731]
+      ],
+      "Goa": [
+        ['Year', '2002', '2007', '2012'],
+        ['Male voters change', 24575, 25577, 50670],
+        ['Female voters change', 34593, 44625, 80985]
+      ]
+    }
+
+    var states = ["Uttar Pradesh", "Uttarakhand", "Punjab", "Manipur", "Goa"]
+    var charts = ["#chart-up", "#chart-uk", "#chart-pb", "#chart-mn", "#chart-ga"]
+    states.forEach(function(item, key) {
+      voteChange(item, charts[key])
+    })
+    // voteChange("Uttar Pradesh", "#chart-up")
+
+    // filters: male/female voter turnout (voters/electors) %, male/female turnout change %
+    var changeData = {
+      "vt-m": [
+        {name: "Uttar Pradesh", 2002: 56.72, 2007: 49.35, 2012: 58.68},
+        {name: "Uttarakhand", 2002: 55.95, 2007: 58.95, 2012: 64.41},
+        {name: "Punjab", 2002: 65.92, 2007: 75.35, 2012: 77.58},
+        {name: "Manipur", 2002: 90.27, 2007: 85.88, 2012: 76.94},
+        {name: "Goa", 2002: 69.87, 2007: 69.69, 2012: 78.86}
+      ],
+      "vt-fm": [
+        {name: "Uttar Pradesh", 2002: 50.25, 2007: 41.92, 2012: 60.28},
+        {name: "Uttarakhand", 2002: 52.63, 2007: 59.45, 2012: 68.12},
+        {name: "Punjab", 2002: 64.27, 2007: 75.47, 2012: 78.9},
+        {name: "Manipur", 2002: 84.57, 2007: 86.82, 2012: 81.36},
+        {name: "Goa", 2002: 67.60, 2007: 70.3, 2012: 84.57}
+      ],
+      "vt-mc": [
+        {name: "Uttar Pradesh", 2002: -7.2, 2007: -2.11, 2012: 35.64},
+        {name: "Uttarakhand", 2002: '-', 2007: 18.01, 2012: 20.55},
+        {name: "Punjab", 2002: -1.57, 2007: 19.04, 2012: 11.12},
+        {name: "Manipur", 2002: 4.04, 2007: 9.16, 2012: -6.81},
+        {name: "Goa", 2002: 8.13, 2007: 7.83, 2012: 14.38}
+      ],
+      "vt-fmc": [
+        {name: "Uttar Pradesh", 2002: -0.68, 2007: -3.7, 2012: 58.37},
+        {name: "Uttarakhand", 2002: '-', 2007: 30.14, 2012: 17.62},
+        {name: "Punjab", 2002: -1.5, 2007: 27.08, 2012: 8.42},
+        {name: "Manipur", 2002: 5.18, 2007: 12.23, 2012: -5.44},
+        {name: "Goa", 2002: 22.83, 2007: 14.39, 2012: 12.55}
+      ],
+    }
+
+    $(document).on('click', '.btn', function() {
+      $(".btn").removeClass('active')
+      $(this).addClass('active')
+      parallelCoordinates(changeData[$(this).data('btn')])
+    })
+
+    parallelCoordinates(changeData["vt-m"])
+  </script>
+</body>
+</html>
